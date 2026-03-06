@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dusty McLean | Systems Architect & MS Notary | MyNode Official</title>
+    <meta name="title" content="Dusty McLean | Systems Architect & MS Notary | MyNode Official">
+    <meta name="description" content="Official hub for Dusty McLean. Digital Intelligence Architect, Systems Integrity Auditor, and Strategic Procurement Specialist. Mississippi's technical backbone.">
+    <meta name="keywords" content="Dusty McLean, MyNode, North Mississippi Notary, Web Developer Mississippi, Notary Public Summit MS, Notary Grenada MS, Strategic Procurement, OSINT Developer, AI Systems Integrator, Cloud Migration Specialist, Logistics Coordinator Mississippi, Systems Integrity Auditor, Digital Intelligence Architect, Legacy-to-Cloud Migration, Project Manager, Boots on the Ground, API Integration, UI/UX Systems Design, Documentation Specialist, Notary Witness">
+    
+    <meta name="geo.region" content="US-MS">
+    <meta name="geo.placename" content="Summit, Grenada, Mississippi">
+    <meta name="geo.position" content="31.2821;-90.4709">
+    <meta name="ICBM" content="31.2821, -90.4709">
+
+    <link rel="canonical" href="https://dustymclean.github.io/dustyportfolio/idcardcreative.html">
+    <link rel="me" href="https://github.com/dustymclean">
+    <link rel="me" href="https://mynode.us.com">
+    <link rel="me" href="https://northmsnotary.com">
+    <link rel="me" href="https://buymeacoffee.com/dustymclean">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://dustymclean.github.io/dustyportfolio/#person",
+          "name": "Dusty McLean",
+          "alternateName": "Dusty Lyn McLean",
+          "gender": "Female",
+          "birthDate": "1998-03-06",
+          "jobTitle": ["Systems Architect", "Mississippi Notary Public", "Creative Technologist"],
+          "knowsAbout": [
+            "Digital Intelligence Architect", "OSINT Developer", "AI Systems Integrator", 
+            "Full-Stack Development", "API Integration", "UI/UX Systems Design", 
+            "Legacy-to-Cloud Migration", "Strategic Procurement", "Logistics Coordination", 
+            "Project Management", "Documentation Specialist", "Systems Integrity Auditor", 
+            "Notary/Witness", "Field Operations"
+          ],
+          "sameAs": [
+            "https://github.com/dustymclean",
+            "https://mynode.us.com",
+            "https://northmsnotary.com",
+            "https://buymeacoffee.com/dustymclean"
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black-bg: #121212;
+            --gold-mid: #b59a5c;
+            --gold-bright: #f7e8a3;
+            --gold-dark: #8d7c49;
+            --gold-gradient: linear-gradient(135deg, #8d7c49 0%, #f7e8a3 25%, #b59a5c 50%, #fcf7dc 75%, #8d7c49 100%);
+            --card-width: 500px;
+            --card-height: 350px;
+        }
+
+        body {
+            background-color: var(--black-bg);
+            margin: 0; padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .hero-container {
+            padding: 80px 0 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .flip-card-scene {
+            width: 100%;
+            max-width: var(--card-width);
+            height: var(--card-height);
+            perspective: 2000px;
+        }
+
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .flip-card-inner.is-flipped { transform: rotateY(180deg) !important; }
+
+        .card-face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border: 2px solid;
+            border-image: var(--gold-gradient) 1;
+            box-sizing: border-box;
+        }
+
+        .card-face::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        .front-face {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #2c2824 0%, #1a1a1a 100%);
+        }
+
+        .qr-container {
+            background: var(--gold-gradient);
+            padding: 6px;
+            margin: 15px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .qr-code { background: white; padding: 10px; display: block; }
+        .qr-code img { width: 110px; height: 110px; display: block; }
+
+        .back-face {
+            transform: rotateY(180deg);
+            background: #0f0f0f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .mission-text {
+            font-size: 1.15rem;
+            color: var(--gold-mid);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .mission-text strong { color: #fff; font-weight: 500; }
+
+        /* REVEAL CONTENT */
+        #shineContent {
+            max-width: 750px;
+            width: 90%;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            padding-bottom: 80px;
+            display: none;
+        }
+
+        #shineContent.visible { display: block; opacity: 1; transform: translateY(0); }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            color: var(--gold-mid);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid rgba(181,154,92,0.2);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            text-align: left;
+        }
+
+        .cap-box {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 15px 20px;
+            border-left: 2px solid var(--gold-dark);
+        }
+
+        .cap-box strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .cap-box p {
+            margin: 0;
+            font-size: 0.75rem;
+            color: var(--gold-bright);
+            line-height: 1.5;
+        }
+
+        .link-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-link {
+            border: 1px solid var(--gold-mid);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.7rem;
+            text-align: center;
+            transition: 0.3s;
+            background: rgba(181,154,92,0.05);
+        }
+
+        .btn-link:hover {
+            background: var(--gold-gradient);
+            color: #000;
+            font-weight: 600;
+        }
+
+        .footer-stamp {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.65rem;
+            color: var(--gold-dark);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 2;
+            opacity: 0.7;
+        }
+
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-container">
+        <div class="flip-card-scene" id="scene">
+            <div class="flip-card-inner" id="supportCard">
+
+                <div class="card-face front-face">
+                    <h2 style="font-family: 'Playfair Display'; letter-spacing: 3px;" class="gold-text">CREATIVE ENGINE</h2>
+                    <div class="qr-container">
+                        <div class="qr-code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://buymeacoffee.com/dustymclean" alt="QR">
+                        </div>
+                    </div>
+                    <div style="font-size: 0.6rem; letter-spacing: 5px; color: var(--gold-mid);">DUSTY MCLEAN</div>
+                </div>
+
+                <div class="card-face back-face">
+                    <p class="mission-text" id="portfolioTrigger">
+                        To build elegant tools that <strong>spark innovation</strong>, solve complex problems with <strong>clean code</strong>, and turn <strong>caffeine into creativity</strong>.
+                    </p>
+                    <div style="font-size: 0.5rem; color: var(--gold-dark); margin-top: 15px; letter-spacing: 2px;">AUTHORITY REVEALED BELOW</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="shineContent">
+        
+        <div class="section-title">Digital Intelligence & Dev</div>
+        <div class="capability-grid">
+            <div class="cap-box">
+                <strong>Full-Stack Development</strong>
+                <p>Bespoke web architecture, API Integration, and technical systems design.</p>
+            </div>
+            <div class="cap-box">
+                <strong>Intelligence & OSINT</strong>
+                <p>Digital Intelligence Architect & OSINT Developer; data discovery frameworks.</p>
+            </div>
+            <div class="cap-box">
+                <strong>AI Systems Integrator</strong>
+                <p>Deploying advanced AI workflows and Legacy-to-Cloud Migrations.</p>
+            </div>
+            <div class="cap-box">
+                <strong>UI/UX Systems Design</strong>
+                <p>Technical interface design focused on high-spec user experience.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Operational Infrastructure</div>
+        <div class="capability-grid">
+            <div class="cap-box">
+                <strong>Strategic Procurement</strong>
+                <p>High-level strategic buying and comprehensive vendor management.</p>
+            </div>
+            <div class="cap-box">
+                <strong>Logistics Coordination</strong>
+                <p>Architecture of complex operational workflows and infrastructure.</p>
+            </div>
+            <div class="cap-box">
+                <strong>Project Manager</strong>
+                <p>Directing technical lifecycles from initial audit through release.</p>
+            </div>
+            <div class="cap-box">
+                <strong>Documentation Specialist</strong>
+                <p>Precision technical documentation and process mapping.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Field Integrity & Compliance</div>
+        <div class="capability-grid">
+            <div class="cap-box">
+                <strong>Systems Integrity Auditor</strong>
+                <p>Specialized auditing of technical processes and operational compliance.</p>
+            </div>
+            <div class="cap-box">
+                <strong>Mississippi Notary / Witness</strong>
+                <p>Authorized legal integrity and witness services based in Summit & Grenada, MS.</p>
+            </div>
+            <div class="cap-box">
+                <strong>Boots on the Ground</strong>
+                <p>On-site support, brand representation, and popup event logistics.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Verified Channels</div>
+        <div class="link-stack">
+            <a href="https://dustymclean.github.io/dustyportfolio/menu.html" target="_blank" class="btn-link">Technical Portfolio</a>
+            <a href="https://mynode.us.com" target="_blank" class="btn-link">MyNode IT Consulting</a>
+            <a href="https://northmsnotary.com" target="_blank" class="btn-link">North MS Notary</a>
+        </div>
+
+        <div class="footer-stamp">
+            DUSTY MCLEAN // OPERATIONS ARCHITECT<br>
+            SUMMIT & GRENADA, MISSISSIPPI
+        </div>
+    </div>
+
+    <script>
+        const card = document.getElementById('supportCard');
+        const scene = document.getElementById('scene');
+        const shine = document.getElementById('shineContent');
+        const trigger = document.getElementById('portfolioTrigger');
+        let isFlipped = false;
+
+        card.addEventListener('click', (e) => {
+            if (isFlipped && e.target.closest('#portfolioTrigger')) return;
+            isFlipped = !isFlipped;
+            card.classList.toggle('is-flipped');
+            if (isFlipped) {
+                card.style.transform = 'rotateY(180deg)';
+                shine.style.display = 'block';
+                setTimeout(() => { shine.classList.add('visible'); }, 50);
+            } else {
+                card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                shine.classList.remove('visible');
+                setTimeout(() => { if(!isFlipped) shine.style.display = 'none'; }, 500);
+            }
+        });
+
+        trigger.addEventListener('click', (e) => {
+            if (isFlipped) {
+                e.stopPropagation();
+                window.open('https://dustymclean.github.io/dustyportfolio/index.html', '_blank');
+            }
+        });
+
+        scene.addEventListener('mousemove', (e) => {
+            if (isFlipped) return;
+            const rect = scene.getBoundingClientRect();
+            const rotateX = (rect.height / 2 - (e.clientY - rect.top)) / 12;
+            const rotateY = ((e.clientX - rect.left) - rect.width / 2) / 15;
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        scene.addEventListener('mouseleave', () => {
+            if (isFlipped) return;
+            card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    </script>
+
+</body>
+</html>
