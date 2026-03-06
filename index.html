@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Dusty McLean | Systems Architect & MS Notary | MyNode Official</title>
+    
     <meta name="title" content="Dusty McLean | Systems Architect & MS Notary | MyNode Official">
-    <meta name="description" content="Official hub for Dusty McLean. Digital Intelligence Architect, Systems Integrity Auditor, and Strategic Procurement Specialist. Mississippi's technical backbone.">
-    <meta name="keywords" content="Dusty McLean, MyNode, North Mississippi Notary, Web Developer Mississippi, Notary Public Summit MS, Notary Grenada MS, Strategic Procurement, OSINT Developer, AI Systems Integrator, Cloud Migration Specialist, Logistics Coordinator Mississippi, Systems Integrity Auditor, Digital Intelligence Architect, Legacy-to-Cloud Migration, Project Manager, Boots on the Ground, API Integration, UI/UX Systems Design, Documentation Specialist, Notary Witness">
+    <meta name="description" content="Official authority node for Dusty McLean. Operations Architect serving the North Mississippi Corridor and Statewide. Specialized in OSINT, Full-Stack Dev, and Systems Integrity.">
+    <meta name="keywords" content="Dusty McLean, MyNode, North Mississippi Notary, Notary Public Grenada, Yalobusha Notary, Panola Notary, Lafayette MS Notary, Tallahatchie Notary, Statewide Mississippi Notary, Systems Architect, OSINT Developer, Strategic Procurement, AI Systems Integrator, Project Manager, Legacy-to-Cloud, UI/UX Systems, Digital Intelligence, Mississippi Business Consulting">
     
     <meta name="geo.region" content="US-MS">
-    <meta name="geo.placename" content="Summit, Grenada, Mississippi">
-    <meta name="geo.position" content="31.2821;-90.4709">
-    <meta name="ICBM" content="31.2821, -90.4709">
+    <meta name="geo.placename" content="Grenada, Yalobusha, Panola, Lafayette, Tallahatchie, Mississippi">
+    <meta name="geo.position" content="33.7690;-89.8031">
+    <meta name="ICBM" content="33.7690, -89.8031">
 
-    <link rel="canonical" href="https://dustymclean.github.io/dustyportfolio/idcardcreative.html">
+    <link rel="canonical" href="https://dustymclean.github.io/dustyportfolio/">
     <link rel="me" href="https://github.com/dustymclean">
     <link rel="me" href="https://mynode.us.com">
     <link rel="me" href="https://northmsnotary.com">
@@ -32,8 +32,9 @@
           "gender": "Female",
           "birthDate": "1998-03-06",
           "jobTitle": ["Systems Architect", "Mississippi Notary Public", "Creative Technologist"],
+          "description": "Systems Architect and Statewide MS Notary specializing in technical integrity, OSINT, and operational infrastructure.",
           "knowsAbout": [
-            "Digital Intelligence Architect", "OSINT Developer", "AI Systems Integrator", 
+            "Digital Intelligence Architect", "OSINT Developer", "AI Systems Integration", 
             "Full-Stack Development", "API Integration", "UI/UX Systems Design", 
             "Legacy-to-Cloud Migration", "Strategic Procurement", "Logistics Coordination", 
             "Project Management", "Documentation Specialist", "Systems Integrity Auditor", 
@@ -45,6 +46,14 @@
             "https://northmsnotary.com",
             "https://buymeacoffee.com/dustymclean"
           ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "North Mississippi Notary",
+          "areaServed": [
+            "Grenada County", "Yalobusha County", "Panola County", 
+            "Lafayette County", "Tallahatchie County", "Mississippi Statewide"
+          ]
         }
       ]
     }
@@ -53,6 +62,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
+        /* ----------------------------------------------------------
+           ROOT ARCHITECTURE & VARIABLES
+           ---------------------------------------------------------- */
         :root {
             --black-bg: #121212;
             --gold-mid: #b59a5c;
@@ -61,8 +73,13 @@
             --gold-gradient: linear-gradient(135deg, #8d7c49 0%, #f7e8a3 25%, #b59a5c 50%, #fcf7dc 75%, #8d7c49 100%);
             --card-width: 500px;
             --card-height: 350px;
+            --transition-speed: 0.6s;
+            --ease: cubic-bezier(0.23, 1, 0.32, 1);
         }
 
+        /* ----------------------------------------------------------
+           BASE STYLING
+           ---------------------------------------------------------- */
         body {
             background-color: var(--black-bg);
             margin: 0; padding: 0;
@@ -76,6 +93,9 @@
             scroll-behavior: smooth;
         }
 
+        /* ----------------------------------------------------------
+           HERO & 3D CARD SECTION
+           ---------------------------------------------------------- */
         .hero-container {
             padding: 80px 0 20px 0;
             display: flex;
@@ -95,13 +115,16 @@
         .flip-card-inner {
             width: 100%;
             height: 100%;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: transform var(--transition-speed) var(--ease);
             transform-style: preserve-3d;
             position: relative;
             cursor: pointer;
+            will-change: transform;
         }
 
-        .flip-card-inner.is-flipped { transform: rotateY(180deg) !important; }
+        .flip-card-inner.is-flipped { 
+            transform: rotateY(180deg) !important; 
+        }
 
         .card-face {
             width: 100%;
@@ -112,12 +135,12 @@
             border: 2px solid;
             border-image: var(--gold-gradient) 1;
             box-sizing: border-box;
+            background: #1a1a1a;
         }
 
         .card-face::before {
             content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
             opacity: 0.04;
             pointer-events: none;
@@ -161,95 +184,219 @@
 
         .mission-text strong { color: #fff; font-weight: 500; }
 
-        /* REVEAL CONTENT */
+        /* ----------------------------------------------------------
+           SHINE REVEAL & GRID
+           ---------------------------------------------------------- */
         #shineContent {
-            max-width: 750px;
-            width: 90%;
+            max-width: 950px;
+            width: 94%;
             opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            padding-bottom: 80px;
+            transform: translateY(20px);
+            transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+            padding-bottom: 100px;
             display: none;
         }
 
-        #shineContent.visible { display: block; opacity: 1; transform: translateY(0); }
+        #shineContent.visible { 
+            display: block; 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        .tap-prompt {
+            font-size: 0.7rem;
+            color: var(--gold-mid);
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 30px 0;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--gold-mid);
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 40px 0 20px 0;
+            letter-spacing: 5px;
+            margin: 60px 0 30px 0;
             border-bottom: 1px solid rgba(181,154,92,0.2);
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             text-align: center;
         }
 
         .capability-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             text-align: left;
         }
 
         .cap-box {
             background: rgba(255, 255, 255, 0.02);
-            padding: 15px 20px;
+            padding: 25px;
             border-left: 2px solid var(--gold-dark);
+            cursor: pointer;
+            transition: all 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cap-box:hover {
+            background: rgba(181,154,92,0.1);
+            transform: translateY(-5px);
+            border-left-color: var(--gold-bright);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .cap-box strong {
             color: #fff;
             display: block;
-            margin-bottom: 4px;
-            letter-spacing: 1px;
-            font-size: 0.8rem;
+            margin-bottom: 8px;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
             text-transform: uppercase;
         }
 
         .cap-box p {
             margin: 0;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             color: var(--gold-bright);
-            line-height: 1.5;
+            line-height: 1.6;
+            pointer-events: none;
         }
 
+        /* ----------------------------------------------------------
+           MODAL NARRATIVE SYSTEM
+           ---------------------------------------------------------- */
+        #modalOverlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .modal-card {
+            background: #111;
+            width: 90%;
+            max-width: 700px;
+            padding: 50px;
+            border: 1px solid var(--gold-mid);
+            box-shadow: 0 40px 80px rgba(0,0,0,1);
+            position: relative;
+            max-height: 85vh;
+            overflow-y: auto;
+            animation: modalPop 0.4s var(--ease);
+        }
+
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .modal-card h3 {
+            color: var(--gold-bright);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            margin-top: 0;
+            border-bottom: 1px solid var(--gold-dark);
+            padding-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .modal-card p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #f0f0f0;
+            margin: 30px 0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-card p.strategic-context {
+            color: var(--gold-bright);
+            background: rgba(181,154,92,0.05);
+            padding: 25px;
+            border-left: 3px solid var(--gold-mid);
+            font-style: italic;
+        }
+
+        .close-btn {
+            color: var(--gold-mid);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            border: 1px solid var(--gold-mid);
+            padding: 15px 35px;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .close-btn:hover {
+            background: var(--gold-gradient);
+            color: #000;
+            font-weight: 700;
+            border-color: transparent;
+        }
+
+        /* ----------------------------------------------------------
+           FOOTER & UTILS
+           ---------------------------------------------------------- */
         .link-stack {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 15px;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn-link {
             border: 1px solid var(--gold-mid);
             color: #fff;
             text-decoration: none;
-            padding: 14px;
+            padding: 18px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.7rem;
+            letter-spacing: 4px;
+            font-size: 0.75rem;
             text-align: center;
-            transition: 0.3s;
+            transition: 0.4s;
             background: rgba(181,154,92,0.05);
         }
 
-        .btn-link:hover {
-            background: var(--gold-gradient);
-            color: #000;
-            font-weight: 600;
+        .btn-link:hover { 
+            background: var(--gold-gradient); 
+            color: #000; 
+            font-weight: 700; 
         }
 
         .footer-stamp {
-            margin-top: 50px;
+            margin-top: 80px;
             text-align: center;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             color: var(--gold-dark);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            line-height: 2;
-            opacity: 0.7;
+            line-height: 2.2;
+            opacity: 0.8;
         }
 
         .gold-text {
@@ -257,103 +404,143 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Custom Scrollbar for Modal */
+        .modal-card::-webkit-scrollbar { width: 4px; }
+        .modal-card::-webkit-scrollbar-track { background: #111; }
+        .modal-card::-webkit-scrollbar-thumb { background: var(--gold-dark); }
     </style>
 </head>
 <body>
 
+    <div id="modalOverlay">
+        <div class="modal-card">
+            <h3 id="modalTitle">Capability Details</h3>
+            <p id="modalDesc1"></p>
+            <p id="modalDesc2" class="strategic-context"></p>
+            <div class="close-btn" id="closeModal">Return to Manifest</div>
+        </div>
+    </div>
+
     <div class="hero-container">
         <div class="flip-card-scene" id="scene">
             <div class="flip-card-inner" id="supportCard">
-
                 <div class="card-face front-face">
-                    <h2 style="font-family: 'Playfair Display'; letter-spacing: 3px;" class="gold-text">CREATIVE ENGINE</h2>
+                    <h2 style="font-family: 'Playfair Display'; letter-spacing: 4px;" class="gold-text">CREATIVE ENGINE</h2>
                     <div class="qr-container">
                         <div class="qr-code">
                             <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://buymeacoffee.com/dustymclean" alt="QR">
                         </div>
                     </div>
-                    <div style="font-size: 0.6rem; letter-spacing: 5px; color: var(--gold-mid);">DUSTY MCLEAN</div>
+                    <div style="font-size: 0.65rem; letter-spacing: 6px; color: var(--gold-mid); font-weight: 600;">DUSTY MCLEAN</div>
                 </div>
-
                 <div class="card-face back-face">
                     <p class="mission-text" id="portfolioTrigger">
                         To build elegant tools that <strong>spark innovation</strong>, solve complex problems with <strong>clean code</strong>, and turn <strong>caffeine into creativity</strong>.
                     </p>
-                    <div style="font-size: 0.5rem; color: var(--gold-dark); margin-top: 15px; letter-spacing: 2px;">AUTHORITY REVEALED BELOW</div>
+                    <div style="font-size: 0.55rem; color: var(--gold-dark); margin-top: 20px; letter-spacing: 3px; font-weight: 600;">AUTHORITY UNLOCKED BELOW</div>
                 </div>
-
             </div>
         </div>
     </div>
 
     <div id="shineContent">
+        <div class="tap-prompt">Tap an item below for a strategic deep-dive</div>
         
         <div class="section-title">Digital Intelligence & Dev</div>
         <div class="capability-grid">
-            <div class="cap-box">
-                <strong>Full-Stack Development</strong>
-                <p>Bespoke web architecture, API Integration, and technical systems design.</p>
+            <div class="cap-box" 
+                 data-p1="I engineer the technical nervous system of your business by building custom API bridges and robust full-stack architectures. This process involves ensuring that disparate software platforms communicate instantly, which eliminates manual data entry and prevents costly administrative bottlenecks." 
+                 data-p2="From a strategic standpoint, a high-performance build reduces long-term technical debt and secures your data integrity. If your backend architecture isn't built for scale, your growth will eventually be choked by the very software meant to support it; I ensure your foundation is future-proof.">
+                <strong>Full-Stack Dev & API</strong>
+                <p>Bespoke web architecture and complex API integration.</p>
             </div>
-            <div class="cap-box">
-                <strong>Intelligence & OSINT</strong>
-                <p>Digital Intelligence Architect & OSINT Developer; data discovery frameworks.</p>
+            <div class="cap-box" 
+                 data-p1="I utilize advanced Open-Source Intelligence (OSINT) frameworks to crawl the public web, identifying competitor movements, potential security risks, and market trends. As a Digital Intelligence Architect, I turn fragmented data points into clear, verified reports for high-stakes decision making." 
+                 data-p2="In the modern era, information is the primary weapon of business. By leveraging digital intel, I provide a defensive shield for your brand and an offensive advantage in the market, ensuring that you move into new partnerships or territories with total situational awareness.">
+                <strong>OSINT & Digital Intel</strong>
+                <p>Digital Intelligence Architect specializing in data discovery.</p>
             </div>
-            <div class="cap-box">
-                <strong>AI Systems Integrator</strong>
-                <p>Deploying advanced AI workflows and Legacy-to-Cloud Migrations.</p>
+            <div class="cap-box" 
+                 data-p1="I manage the complex transition of taking legacy, on-premise data and software and migrating them to secure, high-speed cloud environments. Once stabilized, I integrate custom AI systems to automate repetitive workflows, turning days of work into seconds of computation." 
+                 data-p2="The ROI of cloud migration is found in the removal of physical hardware overhead and the massive gain in operational speed. By automating these processes with AI, I allow your human capital to focus on creative strategy rather than fighting with outdated infrastructure.">
+                <strong>Cloud & AI Integration</strong>
+                <p>Legacy-to-Cloud migration and AI systems workflows.</p>
             </div>
-            <div class="cap-box">
+            <div class="cap-box" 
+                 data-p1="I design technical interfaces that prioritize user flow and operational efficiency over mere aesthetics. Every button, menu, and workflow is architected to reduce cognitive load, ensuring that your internal teams can achieve their goals with zero technical friction." 
+                 data-p2="Good UI/UX is an invisible productivity multiplier. If a system is difficult to navigate, it costs your company money in lost time and user error; I build interfaces that feel natural, ensuring high adoption rates and streamlined operations.">
                 <strong>UI/UX Systems Design</strong>
-                <p>Technical interface design focused on high-spec user experience.</p>
+                <p>Technical interface architecture for high-spec environments.</p>
             </div>
         </div>
 
         <div class="section-title">Operational Infrastructure</div>
         <div class="capability-grid">
-            <div class="cap-box">
+            <div class="cap-box" 
+                 data-p1="I manage high-level technical procurement by evaluating vendor performance, auditing hardware specs, and negotiating contracts to maximize your ROI. I act as your technical shield, ensuring that you are investing in longevity rather than 'vape-ware' or planned obsolescence." 
+                 data-p2="Strategic buying isn't just about the lowest price; it's about life-cycle management and ensuring supply chain resilience. My focus is on securing the technical assets that will actually deliver value, protecting your budget from vendor-driven bloat.">
                 <strong>Strategic Procurement</strong>
-                <p>High-level strategic buying and comprehensive vendor management.</p>
+                <p>High-level strategic buying and vendor management.</p>
             </div>
-            <div class="cap-box">
+            <div class="cap-box" 
+                 data-p1="I build the invisible architecture that moves your physical assets, optimizing supply chains and inventory tracking to ensure resources meet demand. By architecting complex operational workflows, I create a predictable, error-resistant flow for your products and services." 
+                 data-p2="Operational friction is the silent killer of scaling businesses. When your logistics are poorly coordinated, you lose money in every transition; I build the infrastructure that allows your physical operations to match the speed of your digital ambition.">
                 <strong>Logistics Coordination</strong>
-                <p>Architecture of complex operational workflows and infrastructure.</p>
+                <p>Architecture of complex operational infrastructure.</p>
             </div>
-            <div class="cap-box">
-                <strong>Project Manager</strong>
-                <p>Directing technical lifecycles from initial audit through release.</p>
+            <div class="cap-box" 
+                 data-p1="I direct the entire lifecycle of technical projects, acting as the translator between high-level business goals and ground-level engineering execution. I keep stakeholders informed and teams focused, ensuring that every milestone is met with the correct build quality." 
+                 data-p2="I apply an 'Auditor' mindset to project management, identifying 'scope creep' early and holding every contributor to a professional standard. This ensures that the final product meets the original vision without blowing the budget or missing the deadline.">
+                <strong>Project Management</strong>
+                <p>Directing technical lifecycles from audit to release.</p>
             </div>
-            <div class="cap-box">
-                <strong>Documentation Specialist</strong>
-                <p>Precision technical documentation and process mapping.</p>
+            <div class="cap-box" 
+                 data-p1="I specialize in capturing your unique business processes and translating them into precision-mapped, standardized documentation that serves as a single source of truth. This ensures that your tribal knowledge is digitized and protected against personnel changes." 
+                 data-p2="Clear documentation is the foundation of institutional resilience and quality control. Without it, you are one resignation away from a technical crisis; I ensure that every gear in your machine is documented, standardized, and easily transferable to new hires.">
+                <strong>Documentation & Compliance</strong>
+                <p>Precision technical mapping and compliance operations.</p>
             </div>
         </div>
 
         <div class="section-title">Field Integrity & Compliance</div>
         <div class="capability-grid">
-            <div class="cap-box">
-                <strong>Systems Integrity Auditor</strong>
-                <p>Specialized auditing of technical processes and operational compliance.</p>
+            <div class="cap-box" 
+                 data-p1="I conduct deep-dive audits of your operational and technical processes to identify security vulnerabilities and compliance gaps. By maintaining a rigorous paper trail of integrity, I protect your business from systemic errors and provide the shield needed for regulatory scrutiny." 
+                 data-p2="Integrity is a measurable metric, not a vague promise. I look for the 'single point of failure' in your systems that a standard check would miss, ensuring that your business is fortified against both technical failure and legal liability.">
+                <strong>Systems Integrity Audit</strong>
+                <p>Specialized auditing of technical and operational processes.</p>
             </div>
-            <div class="cap-box">
-                <strong>Mississippi Notary / Witness</strong>
-                <p>Authorized legal integrity and witness services based in Summit & Grenada, MS.</p>
+            <div class="cap-box" 
+                 data-p1="As a commissioned official covering the Northern Mississippi Corridor and Statewide, I provide mobile, high-integrity witness services for high-stakes documents. My role is to ensure that deeds, affidavits, and contracts are executed with total legal validity at your location." 
+                 data-p2="Legal verification is the final safeguard in any business transaction. By bringing the weight of the law directly to your site, I ensure that your compliance is never in question and that your most important signatures are legally bulletproof.">
+                <strong>Statewide Notary / Witness</strong>
+                <p>Authorized legal integrity covering 5 Counties & Statewide MS.</p>
             </div>
-            <div class="cap-box">
+            <div class="cap-box" 
+                 data-p1="I provide the physical on-site extension of your brand, managing technical installs, field logistics, and brand activations to ensure strategy works in the real world. I am the 'fixer' on the ground who ensures that the physical reality of an event or install matches the technical plan." 
+                 data-p2="A digital plan is worthless if it fails the first contact with physical reality. I handle the technical mess and field coordination so your office can focus on the big picture, ensuring that your brand's presence is professional and functioning, anywhere in the state.">
                 <strong>Boots on the Ground</strong>
-                <p>On-site support, brand representation, and popup event logistics.</p>
+                <p>On-site support, brand representation, and popup logistics.</p>
+            </div>
+            <div class="cap-box" 
+                 data-p1="I act as the operational glue that connects your physical field work directly to your digital backend databases in real-time. I build the systems that capture field data—like reports or inventory logs—and feed them into your central software without delay." 
+                 data-p2="This integration provides the 'Real-Time Truth' needed to manage a modern operation. When your office sees exactly what the field sees, you can react to market changes instantly, ensuring that your digital dashboard is always a true reflection of the physical world.">
+                <strong>Systems Integrator</strong>
+                <p>The operational glue connecting field work to digital systems.</p>
             </div>
         </div>
 
         <div class="section-title">Verified Channels</div>
         <div class="link-stack">
-            <a href="https://dustymclean.github.io/dustyportfolio/menu.html" target="_blank" class="btn-link">Technical Portfolio</a>
+            <a href="https://dustymclean.github.io/dustyportfolio/" target="_blank" class="btn-link">Full Technical Portfolio</a>
             <a href="https://mynode.us.com" target="_blank" class="btn-link">MyNode IT Consulting</a>
             <a href="https://northmsnotary.com" target="_blank" class="btn-link">North MS Notary</a>
         </div>
 
         <div class="footer-stamp">
             DUSTY MCLEAN // OPERATIONS ARCHITECT<br>
-            SUMMIT & GRENADA, MISSISSIPPI
+            GRENADA, YALOBUSHA, PANOLA, LAFAYETTE, TALLAHATCHIE & STATEWIDE MS
         </div>
     </div>
 
@@ -362,43 +549,87 @@
         const scene = document.getElementById('scene');
         const shine = document.getElementById('shineContent');
         const trigger = document.getElementById('portfolioTrigger');
+        
+        const modal = document.getElementById('modalOverlay');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc1 = document.getElementById('modalDesc1');
+        const modalDesc2 = document.getElementById('modalDesc2');
+        const closeModal = document.getElementById('closeModal');
+        
         let isFlipped = false;
 
+        /* 3D FLIP CONTROLLER */
         card.addEventListener('click', (e) => {
+            // Prevent flip if clicking the internal portfolio link
             if (isFlipped && e.target.closest('#portfolioTrigger')) return;
+            
             isFlipped = !isFlipped;
             card.classList.toggle('is-flipped');
+            
             if (isFlipped) {
                 card.style.transform = 'rotateY(180deg)';
                 shine.style.display = 'block';
+                // Delay visible class to allow display:block to register for transition
                 setTimeout(() => { shine.classList.add('visible'); }, 50);
             } else {
                 card.style.transform = 'rotateX(0deg) rotateY(0deg)';
                 shine.classList.remove('visible');
-                setTimeout(() => { if(!isFlipped) shine.style.display = 'none'; }, 500);
+                // Clean up display after transition
+                setTimeout(() => { if(!isFlipped) shine.style.display = 'none'; }, 600);
             }
         });
 
+        /* CAPABILITY MODAL CONTROLLER */
+        document.querySelectorAll('.cap-box').forEach(box => {
+            box.addEventListener('click', (e) => {
+                e.stopPropagation(); // Stop card from un-flipping
+                
+                modalTitle.innerText = box.querySelector('strong').innerText;
+                modalDesc1.innerText = box.getAttribute('data-p1');
+                modalDesc2.innerText = box.getAttribute('data-p2');
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Lock background scroll
+            });
+        });
+
+        const closeFunc = () => { 
+            modal.style.display = 'none'; 
+            document.body.style.overflow = 'auto'; // Restore scroll
+        };
+
+        closeModal.addEventListener('click', closeFunc);
+        modal.addEventListener('click', (e) => { if(e.target === modal) closeFunc(); });
+
+        /* EXTERNAL LINK CONTROLLER */
         trigger.addEventListener('click', (e) => {
-            if (isFlipped) {
-                e.stopPropagation();
-                window.open('https://dustymclean.github.io/dustyportfolio/index.html', '_blank');
+            if (isFlipped) { 
+                e.stopPropagation(); 
+                window.open('https://dustymclean.github.io/dustyportfolio/', '_blank'); 
             }
         });
 
+        /* GPU-ACCELERATED TILT EFFECT */
+        let ticking = false;
         scene.addEventListener('mousemove', (e) => {
-            if (isFlipped) return;
-            const rect = scene.getBoundingClientRect();
-            const rotateX = (rect.height / 2 - (e.clientY - rect.top)) / 12;
-            const rotateY = ((e.clientX - rect.left) - rect.width / 2) / 15;
-            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            if (isFlipped || ticking) return;
+            ticking = true;
+            
+            requestAnimationFrame(() => {
+                const rect = scene.getBoundingClientRect();
+                const rotateX = (rect.height / 2 - (e.clientY - rect.top)) / 15;
+                const rotateY = ((e.clientX - rect.left) - rect.width / 2) / 20;
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                ticking = false;
+            });
         });
 
-        scene.addEventListener('mouseleave', () => {
-            if (isFlipped) return;
-            card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        scene.addEventListener('mouseleave', () => { 
+            if (!isFlipped) card.style.transform = 'rotateX(0deg) rotateY(0deg)'; 
         });
+
+        /* AUDIT LOG: v28.0 PRODUCTION STABLE */
+        console.log("Master Manifest v28.0 Loaded. Happy Birthday Dusty.");
     </script>
-
 </body>
 </html>
